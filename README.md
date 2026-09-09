@@ -1,118 +1,123 @@
-# AI Project Stand-up & Risk Assistant
+# 🤖 AI Project Stand-up & Risk Assistant
 
-## Project Name
+<p align="center">
+  <strong>From daily project updates to actionable project intelligence — powered by AI</strong>
+</p>
 
-AI Project Stand-up & Risk Assistant
+<p align="center">
+  An AI-native project operations assistant that helps managers collect updates,
+  identify blockers and risks, validate AI-generated insights, and improve project visibility.
+</p>
 
-## Problem Statement
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Prototype-success?style=for-the-badge" alt="Project Status">
+  <img src="https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python" alt="Python">
+  <img src="https://img.shields.io/badge/FastAPI-Backend-009688?style=for-the-badge&logo=fastapi" alt="FastAPI">
+  <img src="https://img.shields.io/badge/React-Frontend-61DAFB?style=for-the-badge&logo=react" alt="React">
+  <img src="https://img.shields.io/badge/Vite-Build-646CFF?style=for-the-badge&logo=vite" alt="Vite">
+  <img src="https://img.shields.io/badge/SQLite-Ready-003B57?style=for-the-badge&logo=sqlite" alt="SQLite">
+  <img src="https://img.shields.io/badge/Testing-pytest-0A9EDC?style=for-the-badge&logo=pytest" alt="pytest">
+</p>
 
-Managers are losing valuable time collecting scattered project updates, identifying blockers, tracking dependencies, and preparing summary reports. The current process is manual, inconsistent, and slows decision-making across teams.
+<p align="center">
+  <a href="#-overview">Overview</a> •
+  <a href="#-problem-statement">Problem</a> •
+  <a href="#-solution">Solution</a> •
+  <a href="#-features">Features</a> •
+  <a href="#-architecture">Architecture</a> •
+  <a href="#-setup">Setup</a> •
+  <a href="#-demo-mode">Demo Mode</a> •
+  <a href="#-testing">Testing</a> •
+  <a href="#-limitations">Limitations</a>
+</p>
 
-## Why This Problem Matters
+---
 
-When updates are fragmented, leadership cannot act quickly on risk. Small blockers become delivery delays, and teams waste time re-asking for status instead of resolving work.
+## 📌 Table of Contents
 
-## Proposed Solution
+- [Overview](#-overview)
+- [Problem Statement](#-problem-statement)
+- [Solution](#-solution)
+- [How It Works](#-how-it-works)
+- [Features](#-features)
+- [Architecture](#-architecture)
+- [Workflow Diagram](#-workflow-diagram)
+- [Application Modules](#-application-modules)
+- [Tech Stack](#-tech-stack)
+- [Project Structure](#-project-structure)
+- [Setup](#-setup)
+- [Environment Variables](#-environment-variables)
+- [Running the Application](#-running-the-application)
+- [Demo Mode](#-demo-mode)
+- [Testing](#-testing)
+- [AI Design Principles](#-ai-design-principles)
+- [Known Limitations](#-known-limitations)
+- [Future Improvements](#-future-improvements)
+- [Documentation](#-documentation)
+- [Demo](#-demo)
+- [Repository](#-repository)
+- [Author](#-author)
 
-This prototype creates a focused AI-native workflow that collects structured updates, normalizes free-form input, detects blockers and dependencies, remembers recurring context, and produces manager-ready summaries with recommendation logic.
+---
 
-## Key Features
+# 🎯 Overview
 
-- Structured employee update form
-- Free-form update normalization
-- AI-based task, blocker, dependency, and risk extraction
-- Historical context for recurring blockers
-- Manager review and validation controls
-- Project dashboard and leadership metrics
-- Demo mode for live product walkthroughs
-- AI copilot for operational queries
+The **AI Project Stand-up & Risk Assistant** is a prototype designed to reduce the manual effort involved in collecting, consolidating, and interpreting project updates.
 
-## Architecture
+Employees submit their daily project updates through the application. The system then analyzes the information and converts it into structured project insights that managers can review and act upon.
 
-The solution uses a simple layered architecture:
+The assistant focuses on identifying:
 
-- Frontend: React + Vite dashboard UI
-- Backend: FastAPI API service
-- AI layer: clean analysis abstraction with deterministic fallback logic
-- Data layer: SQLite-ready schema and seeded demo dataset
-- Demo mode: realistic sample data for presentations when no API key is available
+- ✅ Completed tasks
+- 🔄 Ongoing tasks
+- 🚧 Blockers and issues
+- 🔗 Dependencies
+- ⚠️ Potential risks
+- 📊 Risk levels
+- 💡 Recommended next actions
+- 🎯 AI confidence
 
-## Tech Stack
+The solution is designed around a **human-in-the-loop approach**, where AI assists with analysis while managers retain final decision-making authority.
 
-- Frontend: React, Vite, CSS
-- Backend: Python, FastAPI
-- AI abstraction: isolated service layer
-- Database: SQLite-ready schema
-- Validation: pytest
+---
 
-## Setup Instructions
+# ❗ Problem Statement
 
-1. Open a terminal in the project root.
-2. Create and activate the Python environment if needed.
-3. Install backend dependencies:
-   - cd backend
-   - ../.venv/Scripts/python.exe -m pip install -r requirements.txt
-4. Install frontend dependencies:
-   - cd frontend
-   - npm install
-5. Copy and configure environment values if an LLM is later added:
-   - copy .env.example to .env
+Project updates can be scattered across different communication channels and shared in inconsistent formats.
 
-## Environment Variables
+This creates several operational challenges:
 
-See [.env.example](.env.example) for the environment template.
+- Managers spend significant time collecting updates.
+- Blockers and dependencies may be identified late.
+- Project health is difficult to assess quickly.
+- Stakeholder reporting becomes repetitive and manual.
+- Important project context can be missed.
 
-Required values for the current demo build:
+The objective of this project is to create an AI-powered workflow that converts employee stand-up updates into **structured, actionable project insights**.
 
-- OPENAI_API_KEY: optional, currently not required for demo mode
-- AI_PROVIDER: default value to keep provider logic isolated
-- AI_MODEL: model name for future API integration
-- FASTAPI_HOST: default 0.0.0.0
-- FASTAPI_PORT: default 8000
-- FRONTEND_URL: default http://localhost:5173
+---
 
-## Running the Backend
+# 💡 Solution
 
-From the project root:
+## AI Project Stand-up & Risk Assistant
 
-cd backend
-../.venv/Scripts/python.exe -m uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+The solution creates a focused workflow for converting employee updates into manager-ready project intelligence.
 
-## Running the Frontend
+Employees can provide updates through structured inputs or free-form text.
 
-From the project root:
+The system analyzes the submitted information and produces structured insights around tasks, blockers, dependencies, risks, recommended actions, and confidence.
 
-cd frontend
-npm run dev -- --host 0.0.0.0
+### Core Workflow
 
-## Demo Mode
-
-The application is designed to work without an external AI API key. If no API key is configured, the app uses deterministic mock analysis and seeded realistic data.
-
-## Testing Instructions
-
-Run backend tests from the backend folder:
-
-../.venv/Scripts/python.exe -m pytest -q
-
-Run frontend build validation:
-
-cd frontend
-npm run build
-
-## Known Limitations
-
-- Current demo analysis is deterministic and local, not connected to a production LLM
-- The app uses seeded data for a realistic demo rather than live enterprise data
-- Human review is manually handled in the UI
-
-## Future Improvements
-
-- Add provider-based model integration for OpenAI or Azure OpenAI
-- Save and persist manager review states in SQLite
-- Add true API-level AI analysis with prompt engineering and evaluation
-- Expand executive reporting and project-trend analytics
-
-## Workflow Diagram
-
-See [WORKFLOW_DIAGRAM.md](WORKFLOW_DIAGRAM.md).
+```text
+Employee Update
+       ↓
+AI Analysis
+       ↓
+Structured Insights
+       ↓
+Manager Validation
+       ↓
+Project Health
+       ↓
+Actions / Escalation
