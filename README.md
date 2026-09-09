@@ -145,13 +145,11 @@ Manager feedback (Confirm / Edit / Reject / Resolve) loops back to improve futur
 
 ## 🏗 Architecture / Workflow Diagram
 
-<div align="workflow-diagram.png">
+<div align="center">
 
-*(Add the workflow diagram image to your repo, e.g. `docs/workflow-diagram.png`, then it will render below)*
-
-```markdown
 ![Workflow Diagram](docs/workflow-diagram.png)
-```
+
+*Employee Input → Backend Processing → AI Analysis → Structured Output → Manager Review → Continuous Improvement*
 
 </div>
 
