@@ -145,7 +145,7 @@ Manager feedback (Confirm / Edit / Reject / Resolve) loops back to improve futur
 
 ## 🏗 Architecture / Workflow Diagram
 
-<div align=""D:\Downloads\Workflow Diagram.png"">
+<div align="workflow-diagram.png">
 
 *(Add the workflow diagram image to your repo, e.g. `docs/workflow-diagram.png`, then it will render below)*
 
