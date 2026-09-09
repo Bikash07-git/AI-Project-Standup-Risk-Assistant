@@ -60,64 +60,129 @@
 
 ---
 
-# 🎯 Overview
+# 📌 Overview
 
-The **AI Project Stand-up & Risk Assistant** is a prototype designed to reduce the manual effort involved in collecting, consolidating, and interpreting project updates.
+> **AI Project Stand-up & Risk Assistant**  
+> *From daily updates to actionable project insights — powered by AI.*
 
-Employees submit their daily project updates through the application. The system then analyzes the information and converts it into structured project insights that managers can review and act upon.
+The **AI Project Stand-up & Risk Assistant** is an AI-powered project management workflow designed to transform employee stand-up updates into **structured, actionable project intelligence**.
 
-The assistant focuses on identifying:
+Instead of requiring managers to manually collect and consolidate updates, the system analyzes employee inputs and surfaces important information such as:
 
-- ✅ Completed tasks
-- 🔄 Ongoing tasks
+- 📝 Completed and ongoing tasks
 - 🚧 Blockers and issues
 - 🔗 Dependencies
-- ⚠️ Potential risks
-- 📊 Risk levels
+- ⚠️ Potential project risks
 - 💡 Recommended next actions
-- 🎯 AI confidence
+- 🎯 AI confidence levels
 
-The solution is designed around a **human-in-the-loop approach**, where AI assists with analysis while managers retain final decision-making authority.
+### 🎯 Project Goal
 
----
+The goal is to help project managers **understand project health faster, identify potential risks earlier, and reduce repetitive information-collection effort**.
 
-# ❗ Problem Statement
-
-Project updates can be scattered across different communication channels and shared in inconsistent formats.
-
-This creates several operational challenges:
-
-- Managers spend significant time collecting updates.
-- Blockers and dependencies may be identified late.
-- Project health is difficult to assess quickly.
-- Stakeholder reporting becomes repetitive and manual.
-- Important project context can be missed.
-
-The objective of this project is to create an AI-powered workflow that converts employee stand-up updates into **structured, actionable project insights**.
-
----
-
-# 💡 Solution
-
-## AI Project Stand-up & Risk Assistant
-
-The solution creates a focused workflow for converting employee updates into manager-ready project intelligence.
-
-Employees can provide updates through structured inputs or free-form text.
-
-The system analyzes the submitted information and produces structured insights around tasks, blockers, dependencies, risks, recommended actions, and confidence.
-
-### Core Workflow
+The system follows a **Human-in-the-Loop** approach:
 
 ```text
 Employee Update
        ↓
-AI Analysis
+   AI Analysis
        ↓
 Structured Insights
        ↓
-Manager Validation
+ Manager Review
        ↓
-Project Health
+Confirm / Edit / Reject / Resolve
        ↓
-Actions / Escalation
+Project Health & Actions
+
+### 🧩 Problem Statement
+
+Project updates in Central Operations are often **scattered across multiple channels** and shared in **inconsistent formats**.
+
+Managers spend significant time:
+
+- 📥 Collecting updates from employees
+- 🔄 Following up for missing information
+- 🚧 Identifying blockers and dependencies
+- ⚠️ Understanding project risks
+- 📊 Consolidating project status
+- 📑 Preparing stakeholder reports
+
+Because information is fragmented and reporting styles vary, managers may not get a **timely and consistent view of project health**.
+
+### ❗ Core Problem
+
+> **Managers need a faster and more reliable way to convert scattered daily project updates into structured information that highlights progress, blockers, dependencies, risks, and required actions.**
+
+### 🎯 Problem to Solve
+
+The solution should reduce the manual effort involved in:
+
+```text
+Collecting Updates
+       ↓
+Consolidating Information
+       ↓
+Finding Blockers
+       ↓
+Identifying Risks
+       ↓
+Understanding Project Health
+       ↓
+Deciding What Needs Attention
+
+# 💡 Solution
+
+## 🤖 AI Project Stand-up & Risk Assistant
+
+The proposed solution is an **AI-powered stand-up and project-risk assistant** that converts employee daily updates into structured, actionable project insights.
+
+Employees submit their updates through a centralized web application. The AI then analyzes the information and identifies important project signals such as tasks, blockers, dependencies, risks, and recommended actions.
+
+### 🔄 Solution Flow
+
+```text
+┌──────────────────────┐
+│  👤 Employee Update  │
+│                      │
+│ • Completed Work     │
+│ • Current Work       │
+│ • Blockers           │
+│ • Dependencies       │
+│ • Risks / Concerns   │
+└──────────┬───────────┘
+           ↓
+┌──────────────────────┐
+│   🤖 AI Analysis     │
+│                      │
+│ • Task Extraction    │
+│ • Blocker Detection  │
+│ • Risk Assessment    │
+│ • Action Suggestions │
+│ • Confidence Score   │
+└──────────┬───────────┘
+           ↓
+┌──────────────────────┐
+│ 📋 Structured Output │
+│                      │
+│ Tasks                │
+│ Blockers             │
+│ Dependencies         │
+│ Risks                │
+│ Recommended Actions  │
+│ Confidence           │
+└──────────┬───────────┘
+           ↓
+┌──────────────────────┐
+│ 👤 Manager Review    │
+│                      │
+│ Confirm / Edit       │
+│ Reject / Resolve     │
+└──────────┬───────────┘
+           ↓
+┌──────────────────────┐
+│ 📊 Project Health    │
+│                      │
+│ Risks • Blockers     │
+│ Progress • Actions   │
+└──────────────────────┘
