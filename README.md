@@ -143,15 +143,13 @@ Manager feedback (Confirm / Edit / Reject / Resolve) loops back to improve futur
 
 ---
 
-## 🏗 Architecture / Workflow Diagram
+## 🖼️ Architecture / Workflow Diagram
 
-<div align="workflow-diagram.png">
-
-![Workflow Diagram](docs/workflow-diagram.png)
+<p align="center">
+  <img src="../workflow-diagram.png" alt="AI Project Stand-up & Risk Assistant Workflow Diagram" width="100%">
+</p>
 
 *Employee Input → Backend Processing → AI Analysis → Structured Output → Manager Review → Continuous Improvement*
-
-</div>
 
 **Pipeline at a glance:**
 
