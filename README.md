@@ -145,18 +145,17 @@ Manager feedback (Confirm / Edit / Reject / Resolve) loops back to improve futur
 
 ## 🖼️ Architecture / Workflow Diagram
 
-<p align="center">
-  <img src="../workflow-diagram.png" alt="AI Project Stand-up & Risk Assistant Workflow Diagram" width="100%">
-</p>
+<img src="workflow-diagram.png" alt="AI Project Stand-up & Risk Assistant Workflow Diagram" width="100%">
 
 *Employee Input → Backend Processing → AI Analysis → Structured Output → Manager Review → Continuous Improvement*
+
 
 **Pipeline at a glance:**
 
 ```
 ┌────────────┐   ┌───────────────────┐   ┌───────────────┐   ┌──────────────────┐   ┌────────────────┐
-│  Employee  │ → │ Backend Processing │ → │  AI Analysis  │ → │ Structured Output │ → │ Manager Review │
-│   Input    │   │  (FastAPI + Prep)  │   │  (LLM/OpenAI) │   │  (Tasks/Risks)    │   │  (Dashboard)   │
+│  Employee  │ → │ Backend Processing│  →│  AI Analysis  │ → │ Structured Output│ → │ Manager Review │
+│   Input    │   │  (FastAPI + Prep) │   │  (LLM/OpenAI) │   │  (Tasks/Risks)   │   │  (Dashboard)   │
 └────────────┘   └───────────────────┘   └───────────────┘   └──────────────────┘   └────────────────┘
                                                                                               │
                                                                                               ▼
