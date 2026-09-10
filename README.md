@@ -145,7 +145,7 @@ Manager feedback (Confirm / Edit / Reject / Resolve) loops back to improve futur
 
 ## 🏗 Architecture / Workflow Diagram
 
-<div align="center">
+<div align="workflow-diagram.png">
 
 ![Workflow Diagram](docs/workflow-diagram.png)
 
